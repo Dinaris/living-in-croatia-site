@@ -45,9 +45,9 @@ export default function Consultation() {
                     <Clock className="w-8 h-8 text-cyan-600" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    30-40 минут
+                    {t("consultationDuration")}
                   </h3>
-                  <p className="text-gray-600">Онлайн консультация</p>
+                  <p className="text-gray-600">{t("consultationOnline")}</p>
                 </div>
 
                 <div className="group flex flex-col items-center text-center">
@@ -55,9 +55,9 @@ export default function Consultation() {
                     <HelpCircle className="w-8 h-8 text-cyan-600" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    3 вопроса
+                    {t("consultationQuestions")}
                   </h3>
-                  <p className="text-gray-600">Самые важные для вас</p>
+                  <p className="text-gray-600">{t("consultationImportant")}</p>
                 </div>
 
                 <div className="group flex flex-col items-center text-center">
@@ -65,7 +65,7 @@ export default function Consultation() {
                     <MessageCircle className="w-8 h-8 text-cyan-600" />
                   </div>
                   <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                    Telegram
+                    {t("consultationPlatform")}
                   </h3>
                   <p className="text-gray-600">
                     {siteConfig.consultation.contact}

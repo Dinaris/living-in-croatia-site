@@ -71,6 +71,11 @@ export const translations = {
     consultationDescription:
       "Індивідуальна консультація: 30–40 хвилин онлайн. Можна задати 3 головних питання.",
     consultationContact: "Telegram @TatyanaNazarenkoHr",
+    consultationDuration: "30-40 хвилин",
+    consultationOnline: "Онлайн консультація",
+    consultationQuestions: "3 питання",
+    consultationImportant: "Найважливіші для вас",
+    consultationPlatform: "Telegram",
 
     // Features section
     exclusiveInfo: "Ексклюзивна інформація",
@@ -165,6 +170,11 @@ export const translations = {
     consultationDescription:
       "Индивидуальная консультация: 30–40 минут онлайн. Можно задать 3 главных вопроса.",
     consultationContact: "Telegram @TatyanaNazarenkoHr",
+    consultationDuration: "30-40 минут",
+    consultationOnline: "Онлайн консультация",
+    consultationQuestions: "3 вопроса",
+    consultationImportant: "Самые важные для вас",
+    consultationPlatform: "Telegram",
 
     // Features section
     exclusiveInfo: "Эксклюзивная информация",
