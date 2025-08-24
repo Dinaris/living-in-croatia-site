@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   title:
-    "Living in Croatia - Ваша ежедневная энциклопедия для Жизни в Хорватии",
+    "Living in Croatia - Ваша ежедневная энциклопедия для «Жизни в Хорватии»",
   description:
     "Закрытая группа с проверенной информацией обо всех аспектах жизни и переезда в Хорватию. Получите доступ к эксклюзивной информации от Татьяны Назаренко.",
   keywords:
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Tatyana Nazarenko" }],
   openGraph: {
     title:
-      "Living in Croatia - Ваша ежедневная энциклопедия для Жизни в Хорватии",
+      "Living in Croatia - Ваша ежедневная энциклопедия для «Жизни в Хорватии»",
     description:
       "Закрытая группа с проверенной информацией обо всех аспектах жизни и переезда в Хорватию.",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Living in Croatia - Ваша ежедневная энциклопедия для Жизни в Хорватии",
+      "Living in Croatia - Ваша ежедневная энциклопедия для «Жизни в Хорватии»",
     description:
       "Закрытая группа с проверенной информацией обо всех аспектах жизни и переезда в Хорватию.",
   },

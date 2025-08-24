@@ -1,6 +1,18 @@
-import Link from 'next/link';
-import { Users, Laptop, Clock, Heart, Target } from 'lucide-react';
-import { siteConfig } from '@/content/site';
+import Link from "next/link";
+import { Users, Laptop, Clock, Heart, Target } from "lucide-react";
+import { siteConfig } from "@/content/site";
+
+// Telegram Icon Component
+const TelegramIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+  </svg>
+);
 
 const icons = [Users, Laptop, Clock, Heart];
 
@@ -20,16 +32,18 @@ export default function ForWhom() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
               <Target className="w-4 h-4 text-cyan-500 fill-current" />
-              <span className="text-sm font-medium text-gray-700">Целевая аудитория</span>
+              <span className="text-sm font-medium text-gray-700">
+                Целевая аудитория
+              </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                Для кого подходит
+                Для кого подходит ?
               </span>
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {siteConfig.forWhom.map((item, index) => {
               const Icon = icons[index];
@@ -40,7 +54,7 @@ export default function ForWhom() {
                 >
                   {/* Decorative gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/50 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="p-4 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl group-hover:from-cyan-200 group-hover:to-blue-200 transition-all duration-300 transform group-hover:scale-110">
@@ -61,10 +75,13 @@ export default function ForWhom() {
 
           <div className="text-center">
             <Link
-              href="#buy"
+              href={siteConfig.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-12 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden"
             >
-              <span className="relative z-10">Купить доступ — {siteConfig.price}</span>
+              <TelegramIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+              <span className="relative z-10">Получить доступ к группе</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>

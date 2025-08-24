@@ -1,6 +1,6 @@
-import TestimonialsSlider from './TestimonialsSlider';
-import { siteConfig } from '@/content/site';
-import { MessageSquare, Star } from 'lucide-react';
+import TestimonialsSlider from "./TestimonialsSlider";
+import { siteConfig } from "@/content/site";
+import { MessageSquare, Star } from "lucide-react";
 
 export default function Testimonials() {
   return (
@@ -18,7 +18,9 @@ export default function Testimonials() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
               <MessageSquare className="w-4 h-4 text-cyan-500 fill-current" />
-              <span className="text-sm font-medium text-gray-700">Отзывы клиентов</span>
+              <span className="text-sm font-medium text-gray-700">
+                Отзывы клиентов
+              </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -26,25 +28,27 @@ export default function Testimonials() {
                 Отзывы участников группы
               </span>
             </h2>
-            
+
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Реальные отзывы людей, которые уже воспользовались нашей информацией 
-              и успешно обустроились в Хорватии
+              Реальные отзывы людей, которые уже воспользовались нашей
+              информацией и успешно обустроились в Хорватии
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-6 mt-8 mb-8">
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-lg border border-cyan-100">
                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                <span className="font-semibold text-gray-900">4.9/5 рейтинг</span>
+                <span className="font-semibold text-gray-900">
+                  4.9/5 рейтинг
+                </span>
               </div>
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-lg border border-cyan-100">
                 <MessageSquare className="w-5 h-5 text-cyan-600" />
-                <span className="font-semibold text-gray-900">200+ отзывов</span>
+                <span className="font-semibold text-gray-900">50+ отзывов</span>
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-cyan-100/50">
             <TestimonialsSlider testimonials={siteConfig.testimonials} />
           </div>

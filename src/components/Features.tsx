@@ -1,5 +1,5 @@
-import { CheckCircle, Sparkles } from 'lucide-react';
-import { siteConfig } from '@/content/site';
+import { CheckCircle, Sparkles } from "lucide-react";
+import { siteConfig } from "@/content/site";
 
 export default function Features() {
   return (
@@ -16,7 +16,9 @@ export default function Features() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
             <Sparkles className="w-4 h-4 text-cyan-500 fill-current" />
-            <span className="text-sm font-medium text-gray-700">Эксклюзивная информация</span>
+            <span className="text-sm font-medium text-gray-700">
+              Эксклюзивная информация
+            </span>
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -24,12 +26,13 @@ export default function Features() {
               Что внутри группы
             </span>
           </h2>
-          
+
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Закрытая группа с проверенной и актуальной информацией обо всех аспектах жизни в Хорватии. 
-            Здесь вы найдете ответы на самые важные вопросы и получите поддержку от сообщества.
+            Закрытая группа с проверенной и актуальной информацией обо всех
+            аспектах жизни в Хорватии. Этого достаточно для изучения всех тем и
+            локаций, которые вам понадобятся на пути к комфортной жизни.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {siteConfig.features.map((feature, index) => (
               <div
@@ -39,7 +42,9 @@ export default function Features() {
                 <div className="p-2 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl group-hover:from-cyan-200 group-hover:to-blue-200 transition-all duration-300">
                   <CheckCircle className="w-5 h-5 text-cyan-600 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <span className="text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-300">{feature}</span>
+                <span className="text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-300">
+                  {feature}
+                </span>
               </div>
             ))}
           </div>
