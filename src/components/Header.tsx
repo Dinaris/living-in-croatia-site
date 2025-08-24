@@ -72,6 +72,11 @@ export default function Header() {
             <LanguageSwitcher />
           </div>
 
+          {/* Mobile Language Switcher - Centered */}
+          <div className="md:hidden absolute left-1/2 transform -translate-x-1/2">
+            <LanguageSwitcher />
+          </div>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -100,9 +105,6 @@ export default function Header() {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
                 </Link>
               ))}
-              <div className="pt-4 border-t border-cyan-100/50">
-                <LanguageSwitcher />
-              </div>
             </div>
           </nav>
         )}
