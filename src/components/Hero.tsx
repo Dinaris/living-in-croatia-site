@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Star, Users, Award } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Telegram Icon Component
 const TelegramIcon = ({ className }: { className?: string }) => (
@@ -16,6 +19,8 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="hero"
@@ -36,7 +41,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
               <Star className="w-4 h-4 text-yellow-500 fill-current" />
               <span className="text-sm font-medium text-gray-700">
-                Эксперт по жизни в Хорватии
+                {t("expertBadge")}
               </span>
             </div>
 
@@ -47,11 +52,11 @@ export default function Hero() {
             </h1>
 
             <h2 className="text-2xl md:text-3xl text-gray-700 font-semibold mb-8 leading-relaxed">
-              {siteConfig.title}
+              {t("title")}
             </h2>
 
             <p className="text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
-              {siteConfig.description}
+              {t("description")}
             </p>
 
             {/* Stats */}
@@ -59,13 +64,13 @@ export default function Hero() {
               <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-lg">
                 <Users className="w-5 h-5 text-cyan-600" />
                 <span className="font-semibold text-gray-900">
-                  3k+ подписчиков на YouTube и TikTok
+                  {t("subscribers")}
                 </span>
               </div>
               <div className="flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-3 rounded-2xl shadow-lg">
                 <Award className="w-5 h-5 text-cyan-600" />
                 <span className="font-semibold text-gray-900">
-                  3+ года жизни и опыта в Хорватии
+                  {t("experience")}
                 </span>
               </div>
             </div>
@@ -78,7 +83,7 @@ export default function Hero() {
                 className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden flex items-center justify-center gap-3"
               >
                 <TelegramIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="relative z-10">Получить доступ к группе</span>
+                <span className="relative z-10">{t("getAccessButton")}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
 
@@ -89,7 +94,7 @@ export default function Hero() {
                 className="group bg-white/90 backdrop-blur-sm hover:bg-white text-cyan-600 border-2 border-cyan-200 hover:border-cyan-300 px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3"
               >
                 <MessageCircle className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                Записаться на консультацию
+                {t("consultationButton")}
               </Link>
             </div>
           </div>
@@ -118,7 +123,7 @@ export default function Hero() {
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="font-semibold text-gray-900">
-                      Онлайн консультант
+                      {t("onlineConsultant")}
                     </span>
                   </div>
                 </div>

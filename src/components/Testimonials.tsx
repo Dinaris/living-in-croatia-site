@@ -1,8 +1,13 @@
+"use client";
+
 import TestimonialsSlider from "./TestimonialsSlider";
 import { siteConfig } from "@/content/site";
 import { MessageSquare, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+
   return (
     <section id="reviews" className="py-20 relative overflow-hidden">
       {/* Animated Background */}
@@ -19,19 +24,18 @@ export default function Testimonials() {
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
               <MessageSquare className="w-4 h-4 text-cyan-500 fill-current" />
               <span className="text-sm font-medium text-gray-700">
-                Отзывы клиентов
+                {t("clientReviews")}
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                Отзывы участников группы
+                {t("reviewsTitle")}
               </span>
             </h2>
 
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Реальные отзывы людей, которые уже воспользовались нашей
-              информацией и успешно обустроились в Хорватии
+              {t("reviewsDescription")}
             </p>
 
             {/* Stats */}
@@ -39,12 +43,14 @@ export default function Testimonials() {
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-lg border border-cyan-100">
                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
                 <span className="font-semibold text-gray-900">
-                  4.9/5 рейтинг
+                  {t("rating")}
                 </span>
               </div>
               <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-2xl shadow-lg border border-cyan-100">
                 <MessageSquare className="w-5 h-5 text-cyan-600" />
-                <span className="font-semibold text-gray-900">50+ отзывов</span>
+                <span className="font-semibold text-gray-900">
+                  {t("reviewsCount")}
+                </span>
               </div>
             </div>
           </div>

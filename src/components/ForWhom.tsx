@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Users, Laptop, Clock, Heart, Target } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Telegram Icon Component
 const TelegramIcon = ({ className }: { className?: string }) => (
@@ -17,6 +20,8 @@ const TelegramIcon = ({ className }: { className?: string }) => (
 const icons = [Users, Laptop, Clock, Heart];
 
 export default function ForWhom() {
+  const { t, tObject } = useLanguage();
+
   return (
     <section id="forwhom" className="py-20 relative overflow-hidden">
       {/* Animated Background */}
@@ -33,19 +38,19 @@ export default function ForWhom() {
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-cyan-100">
               <Target className="w-4 h-4 text-cyan-500 fill-current" />
               <span className="text-sm font-medium text-gray-700">
-                Целевая аудитория
+                {t("targetAudience")}
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-                Для кого подходит ?
+                {t("forWhomTitle")}
               </span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {siteConfig.forWhom.map((item, index) => {
+            {tObject("forWhomItems").map((item: any, index: number) => {
               const Icon = icons[index];
               return (
                 <div
@@ -81,7 +86,7 @@ export default function ForWhom() {
               className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-12 py-5 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-cyan-500/25 relative overflow-hidden"
             >
               <TelegramIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-              <span className="relative z-10">Получить доступ к группе</span>
+              <span className="relative z-10">{t("getAccessButton")}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>

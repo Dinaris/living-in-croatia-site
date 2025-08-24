@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
@@ -35,8 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+    <html lang="uk" className="scroll-smooth">
+      <body className={inter.className}>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

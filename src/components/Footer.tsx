@@ -1,7 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Youtube, Instagram } from 'lucide-react';
-import { siteConfig } from '@/content/site';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Youtube, Instagram } from "lucide-react";
+import { siteConfig } from "@/content/site";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -11,33 +14,35 @@ const TikTokIcon = ({ className }: { className?: string }) => (
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
   </svg>
 );
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const socialLinks = [
     {
-      name: 'YouTube',
+      name: "YouTube",
       url: siteConfig.socialLinks.youtube,
       icon: Youtube,
-      color: 'hover:text-red-500',
-      bgColor: 'hover:bg-red-500/10'
+      color: "hover:text-red-500",
+      bgColor: "hover:bg-red-500/10",
     },
     {
-      name: 'Instagram',
+      name: "Instagram",
       url: siteConfig.socialLinks.instagram,
       icon: Instagram,
-      color: 'hover:text-pink-500',
-      bgColor: 'hover:bg-pink-500/10'
+      color: "hover:text-pink-500",
+      bgColor: "hover:bg-pink-500/10",
     },
     {
-      name: 'TikTok',
+      name: "TikTok",
       url: siteConfig.socialLinks.tiktok,
       icon: TikTokIcon,
-      color: 'hover:text-white',
-      bgColor: 'hover:bg-gray-800'
-    }
+      color: "hover:text-white",
+      bgColor: "hover:bg-gray-800",
+    },
   ];
 
   return (
@@ -57,7 +62,7 @@ export default function Footer() {
               <div className="relative">
                 {/* Decorative ring */}
                 <div className="absolute -inset-2 bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                
+
                 <Image
                   src="/images/Logo.png"
                   alt="Living in Croatia Logo"
@@ -83,8 +88,10 @@ export default function Footer() {
                   >
                     {/* Decorative gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
-                    <Icon className={`w-7 h-7 text-gray-300 ${social.color} transition-all duration-300 relative z-10`} />
+
+                    <Icon
+                      className={`w-7 h-7 text-gray-300 ${social.color} transition-all duration-300 relative z-10`}
+                    />
                   </Link>
                 );
               })}
@@ -95,11 +102,13 @@ export default function Footer() {
           <div className="mt-12 pt-8 border-t border-gray-700/50">
             <div className="text-center">
               <p className="text-gray-400 text-sm leading-relaxed">
-                © 2025 Living in Croatia. Все права защищены.
+                © 2025 Living in Croatia. {t("allRightsReserved")}
               </p>
               <div className="mt-2 flex items-center justify-center gap-2">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
-                <span className="text-xs text-gray-500">Сделано с ❤️ для переезжающих в Хорватию</span>
+                <span className="text-xs text-gray-500">
+                  {t("madeWithLove")}
+                </span>
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-500"></div>
               </div>
             </div>
