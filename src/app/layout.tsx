@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.livingincroatia.site/Main.jpeg",
-        width: 1200,
-        height: 630,
+        width: 711,
+        height: 443,
         alt: "Tatyana Nazarenko - Expert on life in Croatia",
         type: "image/jpeg",
       },
@@ -84,6 +84,37 @@ export default function RootLayout({
     <html lang="uk" className="scroll-smooth">
       <head>
         <StructuredData />
+        <meta
+          property="og:image"
+          content="https://www.livingincroatia.site/Main.jpeg"
+        />
+        <meta property="og:image:width" content="711" />
+        <meta property="og:image:height" content="443" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta
+          property="og:image:alt"
+          content="Tatyana Nazarenko - Expert on life in Croatia"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.livingincroatia.site/Main.jpeg"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="Tatyana Nazarenko - Expert on life in Croatia"
+        />
+        <meta
+          name="image"
+          content="https://www.livingincroatia.site/Main.jpeg"
+        />
+        <meta
+          name="thumbnail"
+          content="https://www.livingincroatia.site/Main.jpeg"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://www.livingincroatia.site/Main.jpeg"
+        />
       </head>
       <body className={inter.className}>
         <LanguageProvider>{children}</LanguageProvider>
