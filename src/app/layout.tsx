@@ -37,6 +37,15 @@ export const metadata: Metadata = {
     },
   },
   category: "Travel & Immigration",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title:
       "Living in Croatia - Ваша ежедневная энциклопедия для «Жизни в Хорватии»",
@@ -48,10 +57,11 @@ export const metadata: Metadata = {
     siteName: "Living in Croatia",
     images: [
       {
-        url: "/images/Main.jpeg",
+        url: "https://www.livingincroatia.site/Main.jpeg",
         width: 1200,
         height: 630,
         alt: "Tatyana Nazarenko - Expert on life in Croatia",
+        type: "image/jpeg",
       },
     ],
   },
@@ -61,7 +71,7 @@ export const metadata: Metadata = {
       "Living in Croatia - Ваша ежедневная энциклопедия для «Жизни в Хорватии»",
     description:
       "Закрытая группа с проверенной информацией обо всех аспектах жизни и переезда в Хорватию.",
-    images: ["/images/Main.jpeg"],
+    images: ["https://www.livingincroatia.site/Main.jpeg"],
   },
 };
 

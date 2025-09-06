@@ -7,7 +7,7 @@ export default function StructuredData() {
     description:
       "Expert on life and relocation to Croatia with 3+ years of experience",
     url: "https://www.livingincroatia.site",
-    image: "https://www.livingincroatia.site/images/Main.jpeg",
+    image: "https://www.livingincroatia.site/Main.jpeg",
     sameAs: [
       "https://www.youtube.com/@livingincroatia",
       "https://www.instagram.com/tatyana_nazarenko_hr/",
